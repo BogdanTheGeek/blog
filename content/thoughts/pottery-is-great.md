@@ -4,7 +4,7 @@ date = '2025-05-10T13:29:19+01:00'
 author = 'Bogdan Ionescu'
 description = 'If you are sick of technology pick up pottery.'
 tags = ['pottery', 'meditation']
-cover = '/images/pots_1.jpeg'
+cover = 'images/pots_1.jpeg'
 +++
 
 # The Collector

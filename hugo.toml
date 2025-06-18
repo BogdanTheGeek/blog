@@ -29,7 +29,6 @@ copyright = "Bogdan Ionescu"
 
       [languages.en.params.logo]
         logoText = "BogdanTheGeek's Blog"
-        logoHomeLink = "/"
 
       [languages.en.menu]
         [[languages.en.menu.main]]
