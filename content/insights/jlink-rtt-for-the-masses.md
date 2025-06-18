@@ -4,7 +4,7 @@ date = '2025-06-01T14:47:43+01:00'
 author = 'Bogdan Ionescu'
 description = 'How to do bidirectional logging over SWD on ARM.'
 tags = ['programming', 'arm', 'tools', 'electronics']
-cover = '/images/monty-python-peasants.jpg'
+cover = 'images/monty-python-peasants.jpg'
 +++
 
 # TLDR;

@@ -4,6 +4,6 @@ date = '{{ .Date }}'
 author = 'Bogdan Ionescu'
 description = ''
 tags = ['programming']
-cover = '/images/'
+cover = 'images/'
 draft = true
 +++

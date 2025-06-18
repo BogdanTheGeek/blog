@@ -4,7 +4,7 @@ date = '2025-05-15T17:24:53+01:00'
 author = 'Bogdan Ionescu'
 description = 'MicroPython Programable PID for Temperature Control'
 tags = ['programming', 'pottery', 'micropython', 'embedded']
-cover = '/images/micropppid_home.png'
+cover = 'images/micropppid_home.png'
 +++
 
 # TLDR;
@@ -15,7 +15,7 @@ I recently took up pottery as my [new favourite hobby](/thoughts/pottery-is-grea
 
 For my first few pots, I just re-purposed my *very* cheap metal casting forge. I built this out of eight 1" thick fire bricks, some fire cement, an electric stove top "burner" and a cheap PID controller.
 
-![old kiln](/images/old_kiln.jpeg)
+![old kiln](images/old_kiln.jpeg)
 
 The cheap PID controller was *horrible*. Firstly, it could only go up to 999C, which meant that I could really glaze anything.
 The lack of programmable temperature curves (aka, reflow profiles) also meant that I had to baby the kiln for the couple of hours or so that it took to fire a pot.
@@ -91,11 +91,11 @@ The only external dependency I have is Plotly.js because its way too big, but I 
 # Cool Features
 Development went so smoothly, that I ended up implementing a lot more cool features than I expected.
 
-![home page](/images/micropppid_home.png)
+![home page](images/micropppid_home.png)
 
 I used JSON for the settings and temperature profiles to allow easy editing. The settings page and settings object in the code are built dynamically based on the structure of document, so it should be backwards and forwards compatible.
 
-![settings](/images/micropppid_settings.png)
+![settings](images/micropppid_settings.png)
 
 All pins are configurable at runtime!.[^3]
 
