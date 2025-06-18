@@ -1,0 +1,50 @@
+baseURL = '/'
+languageCode = 'en-gb'
+title = "BogdanTheGeek's Blog"
+theme = 'terminal'
+copyright = "Bogdan Ionescu"
+
+[params]
+  centerTheme = true
+  readingTime = true
+  contentTypeName = "*"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "BogdanTheGeek's Blog"
+
+    [languages.en.params]
+      subtitle = "Nerd sniping since '98"
+      copyright = "Bogdan Ionescu"
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      missingContentMessage = "Page not found..."
+      missingBackButtonLabel = "cd $HOME"
+      minuteReadingTime = "min read"
+      words = "words"
+
+      [languages.en.params.logo]
+        logoText = "BogdanTheGeek's Blog"
+        logoHomeLink = "/"
+
+      [languages.en.menu]
+        [[languages.en.menu.main]]
+          identifier = "about"
+          name = "About"
+          url = "/about"
+        [[languages.en.menu.main]]
+          identifier = "projects"
+          name = "Projects"
+          url = "/projects"
+        [[languages.en.menu.main]]
+          identifier = "thoughts"
+          name = "Thoughts"
+          url = "/thoughts"
+        [[languages.en.menu.main]]
+          identifier = "insights"
+          name = "Insights"
+          url = "/insights"
