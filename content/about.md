@@ -7,7 +7,7 @@ readingTime = false
 +++
 
 # $(whoami)
-{{< image src="images/me.jpg" alt="mug-shot" position="left" style="border-radius: 50%; padding: 0" >}}
+{{< image src= "images/me.jpg" alt="mug-shot" position="left" style="border-radius: 50%; padding: 0" >}}
 ## Bogdan Ionescu
  - Embedded Engineer most of the time.
  - Origami artist some of the time.
