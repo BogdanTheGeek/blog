@@ -9,6 +9,14 @@ copyright = "Bogdan Ionescu"
   readingTime = true
   contentTypeName = "*"
 
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'static'
+    target = 'assets'
+
 [languages]
   [languages.en]
     languageName = "English"
