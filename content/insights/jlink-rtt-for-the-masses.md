@@ -55,7 +55,7 @@ The selling point is that you just include their library, and you get non-blocki
 
 The way this works is actually pretty cool, so I will take a moment to explain how it works before I show my alternative.
 All ARM Cortex CPUs allow the debugger probe to read the contents of any address that the CPU can access without halting it. Take a second to appreciate how cool that is.
-When you add the RTT library to your code, it creates a couple of ring buffers in memory with a header that can be easily found like `0xF00CACIA` or `0x1234ABCD`.
+When you add the RTT library to your code, it creates a couple of ring buffers in memory with a header that can be easily found like `0xF0CACCIA` or `0x1234ABCD`.
 What the J-Link Viewer software does, is scan the contents of RAM for that header, then it can just read from and write to the ring buffer structure.
 
 This is such a powerful technique. Tools like [VisualGDB](https://visualgdb.com/) and [IAR](https://www.iar.com/embedded-development-tools/iar-embedded-workbench) do the same thing to plot the contents of variables at runtime.
