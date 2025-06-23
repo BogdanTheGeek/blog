@@ -8,6 +8,7 @@ copyright = "Bogdan Ionescu"
   centerTheme = true
   readingTime = true
   contentTypeName = "*"
+  repo = 'https://github.com/BogdanTheGeek/blog'
 
 [module]
   [[module.mounts]]
