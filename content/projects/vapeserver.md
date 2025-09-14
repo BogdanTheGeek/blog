@@ -8,7 +8,7 @@ cover = 'images/vapeserver.jpg'
 +++
 
 # Preface
-This article is *NOT* served from a web server running on a disposable vape. If you want to see the real deal, click [here](https://ewaste.fka.wtf). The content is otherwise identical.
+This article is *NOT* served from a web server running on a disposable vape. If you want to see the real deal, click [here](http://ewaste.fka.wtf). The content is otherwise identical.
 
 # Background
 
