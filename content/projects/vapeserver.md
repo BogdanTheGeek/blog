@@ -42,7 +42,7 @@ If you are older than me, you might remember a time before Wi-Fi and Ethernet, t
 [^2]: Later modems used PPP (Point-to-Point Protocol)
 
 This may not come as a surprise, but Linux (and with some tweaking even macOS) supports SLIP. The `slattach` utility can make any `/dev/tty*` send and receive IP packets. All we have to do is put the data down the wire in the right format and provide a virtual tty.
-This is actually easier than you might imagine, pyOCD can forward all semihosting though a telnet port. Then, we use `socat` to link that port to a virtual tty:
+This is actually easier than you might imagine, pyOCD can forward all semihosting through a telnet port. Then, we use `socat` to link that port to a virtual tty:
 
 ```sh
 pyocd gdb -S -O semihost_console_type=telnet -T $(PORT) $(PYOCDFLAGS) &
@@ -66,7 +66,7 @@ So how fast is a web server running on a disposable microcontroller. Well, initi
 However, the problem was actually between the seat and the steering wheel the whole time. The first implementation read and wrote a single character at a time, which had a massive overhead associated with it. I previously benchmarked semihosting on this device, and I was getting ~20KiB/s, but uIP's SLIP implementation was designed for very low memory devices, so it was serialising the data byte by byte.
 We have a whopping 3kiB of RAM to play with, so I added a ring buffer to cache reads from the host and feed them into the SLIP poll function. I also split writes in batches to allow for escaping.
 
-Now this is what I call blazingly fast! Pings now take 20ms, no packet loss and a full page loads in about 160ms. This was using using almost all of the RAM, but I could also dial down the sizes of the buffer to have more than enough headroom to run other tasks. The project repo has everything set to a nice balance latency and RAM usage:
+Now this is what I call blazingly fast! Pings now take 20ms, no packet loss and a full page loads in about 160ms. This was using almost all of the RAM, but I could also dial down the sizes of the buffer to have more than enough headroom to run other tasks. The project repo has everything set to a nice balance latency and RAM usage:
 ```
 Memory region         Used Size  Region Size  %age Used
            FLASH:        5116 B        24 KB     20.82%
