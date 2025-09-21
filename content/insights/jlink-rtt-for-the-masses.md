@@ -119,7 +119,7 @@ int _write(int fd, const char *buf, int size)
 
 To see the output, just enable semihosting on your debug probe. For `pyocd`, just pass the `-S` flag. For `openocd`, add `monitor arm semihosting enable` to the run commands.
 
-There is one more thing that we need do. If we don't have a debugger connected, the breakpoint instruction is going to throw and exception. We need to modify our hard fault handler to ignore the exception.
+There is one more thing that we need do. If we don't have a debugger connected, the breakpoint instruction is going to throw an exception. We need to modify our hard fault handler to ignore the exception.
 I'm not going to bore you with how you have to do it, but it will require a bit of assembly. [Here](https://github.com/BogdanTheGeek/minimal-py32/blob/529c0b3962d8cad490d942f291cb6f0fa50734cf/src/semihost.c#L49) is how I implemented it, based on Erich Styger's [example](https://mcuoneclipse.com/2023/03/09/using-semihosting-the-direct-way/).
 Erich also goes into some performance metrics.
 
