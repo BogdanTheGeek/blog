@@ -55,7 +55,7 @@ The selling point is that you just include their library, and you get non-blocki
 
 The way this works is actually pretty cool, so I will take a moment to explain how it works before I show my alternative.
 All ARM Cortex CPUs allow the debugger probe to read the contents of any address that the CPU can access without halting it. Take a second to appreciate how cool that is.
-When you add the RTT library to your code, it creates a couple of ring buffers in memory with a header that can be easily found like `0xF0CACCIA` or `0x1234ABCD`.
+When you add the RTT library to your code, it creates a couple of ring buffers in memory with a header that can be easily found like `0xF0CACC1A` or `0x1234ABCD`.
 What the J-Link Viewer software does, is scan the contents of RAM for that header, then it can just read from and write to the ring buffer structure.
 
 This is such a powerful technique. Tools like [VisualGDB](https://visualgdb.com/) and [IAR](https://www.iar.com/embedded-development-tools/iar-embedded-workbench) do the same thing to plot the contents of variables at runtime.
@@ -119,7 +119,7 @@ int _write(int fd, const char *buf, int size)
 
 To see the output, just enable semihosting on your debug probe. For `pyocd`, just pass the `-S` flag. For `openocd`, add `monitor arm semihosting enable` to the run commands.
 
-There is one more thing that we need do. If we don't have a debugger connected, the breakpoint instruction is going to throw and exception. We need to modify our hard fault handler to ignore the exception.
+There is one more thing that we need do. If we don't have a debugger connected, the breakpoint instruction is going to throw an exception. We need to modify our hard fault handler to ignore the exception.
 I'm not going to bore you with how you have to do it, but it will require a bit of assembly. [Here](https://github.com/BogdanTheGeek/minimal-py32/blob/529c0b3962d8cad490d942f291cb6f0fa50734cf/src/semihost.c#L49) is how I implemented it, based on Erich Styger's [example](https://mcuoneclipse.com/2023/03/09/using-semihosting-the-direct-way/).
 Erich also goes into some performance metrics.
 
