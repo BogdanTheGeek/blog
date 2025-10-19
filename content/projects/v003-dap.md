@@ -2,14 +2,14 @@
 title = "World's Cheapest ARM Debugger is Actually RISC-V"
 date = '2025-10-19T15:07:31+01:00'
 author = 'Bogdan Ionescu'
-description = 'Debugging a free ARM MCU with a 10c RISC-V probe'
+description = 'Debugging a free ARM MCU with a 10¢ RISC-V probe'
 tags = ['programming', 'arm', 'risc-v', 'ch32v003', 'tools', 'electronics']
 cover = 'images/v003-dap.jpeg'
 +++
 
 # Background
 Continuing my work with [arm debugging]({{< ref "/insights/jlink-rtt-for-the-masses.md" >}}) on free microcontrollers recovered from [disposable vapes]({{< ref "/projects/vapeserver.md" >}}), I felt like using a $5 raspberry pi pico to program and debug these micros was a bit too extravagant, too bourgeoisie.
-A working man's microcontroller deserves a blue collar debugger to match. I have been using the 10c ch32v003 RISC-V microcontroller for a few years now and I though it would be a perfect fit for this project.
+A working man's microcontroller deserves a blue collar debugger to match. I have been using the 10¢ ch32v003 RISC-V microcontroller for a few years now and I though it would be a perfect fit for this project.
 It also helped that a member of the electronics community I am part of had a bounty out for this exact project.
 
 # I Missed Having Fun
@@ -19,7 +19,7 @@ I find hardware much more interesting than software. I missed the days of progra
 Well, it seems like I am not the only one who feels this way, but unlike me, [cnlohr](https://github.com/cnlohr/) decided to do something about it. A few years ago he created [ch32fun](https://github.com/cnlohr/ch32fun) to make working with the ch32v003(and more) really fun. He recently did a presentation on [how this project came about](https://www.youtube.com/watch?v=T_Lw4m3O6fY).
 I have been using it for more than a dozen projects so far and it really been a lot of *fun*.
 
-The ch32v003 is pretty famous by now as a *really* cheap microcontroller, as low as 10c in bulk, which alone has made it my micro of choice for quick projects.
+The ch32v003 is pretty famous by now as a *really* cheap microcontroller, as low as 10¢ in bulk, which alone has made it my micro of choice for quick projects.
 However, it's real party trick is a Software Low Speed USB stack that cnlohr wrote called [rv003usb](https://github.com/cnlohr/rv003usb). This opens up the door for *so* many more projects, including this one.
 
 # What am I supposed to do with my ARMs?
